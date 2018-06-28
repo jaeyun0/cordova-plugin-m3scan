@@ -14,6 +14,6 @@
         </config-file>
         <config-file parent="/manifest" target="AndroidManifest.xml"></config-file>
         <source-file src="lib/M3SDK.jar" target-dir="libs" />
-        <source-file src="src/android/m3scan.java" target-dir="src/net/m3mobile/scan/m3scan" />
+        <source-file src="src/android/m3scan.java" target-dir="src/net/m3mobile/scan" />
     </platform>
 </plugin>
