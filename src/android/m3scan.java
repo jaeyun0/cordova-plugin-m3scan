@@ -55,7 +55,7 @@ public class m3scan extends CordovaPlugin {
     public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
         Log.d(getClass().getSimpleName(), action.toString());
         this.callbackContext = callbackContext;
-        Context context = this.cordova.getActivity().getApplicationContext();
+        final Context context = this.cordova.getActivity().getApplicationContext();
         if(action.equals("scanStart")) {
             mBarcode.scanStart();
             scanCallbackContext = callbackContext;
