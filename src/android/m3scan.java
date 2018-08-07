@@ -56,7 +56,11 @@ public class m3scan extends CordovaPlugin {
         Log.d(getClass().getSimpleName(), action.toString());
         this.callbackContext = callbackContext;
         final Context context = this.cordova.getActivity().getApplicationContext();
-        if(action.equals("scanStart")) {
+        if(action.equals("setScanner")) {
+            mBarcode.setScanner(args.getBoolean(0));
+            callbackContext.success(action);
+            return true;
+        } else if(action.equals("scanStart")) {
             mBarcode.scanStart();
             scanCallbackContext = callbackContext;
             return true;
